@@ -2,8 +2,7 @@
 // @name           140mafia
 // @namespace      http://www.tymy.net/~matsu/blog/
 // @description    140mafia background link fetcher. cvtUrlToLink.user.js is required.
-// @exclude        *
-// @include        http://140mafia.com/profile\?id=*
+// @include        http://140mafia.com/profile*
 // ==/UserScript==
 /**
  * CHANGELOG:
