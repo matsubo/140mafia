@@ -8,7 +8,7 @@
  * CHANGELOG:
  * v1.0 09/6/27 publish
  * v1.1 09/6/28 disable multi post on the same porfile page
- * 
+ * v1.2 09/6/28 disable iframe load when submiting invitation link
  * 
  * TODOS:
  * Work independently
@@ -44,6 +44,8 @@
     
     var send = document.getElementById("send");
     send.parentNode.submit();
+    
+    return;
   }
 
   
