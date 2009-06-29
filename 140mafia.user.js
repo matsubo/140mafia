@@ -50,20 +50,13 @@
 
   
   for(var index = 0; index < max; index++){
-    var pattern = /^http:\/\/140mafia\.com\/invite\/direct_link\?uid=/;
     var element = aTags[index];
     var url = element.getAttribute("href");
-    
-    if (pattern.test(url)){
-     var iframe =  document.createElement('iframe');
-     iframe.style.border = '1px solid #FF0000';
-     iframe.frameBorder = '0';
-     iframe.style.display = 'hidden';
-     iframe.style.height = '1px';
-     iframe.style.width = '1px';
-     iframe.src = url;
-     
-     aTags[index].parentNode.appendChild(iframe);
+    var pattern = /^http:\/\/140mafia\.com\/invite\/direct_link\?uid=/;
+    if(pattern.test(url)){
+      var req = new XMLHttpRequest();
+      req.open('GET', url, true);
+      req.send(null);
     }
   }
 
